@@ -111,6 +111,7 @@
   margin-right: 2em;
 }
 
+
 /* Styles for main page */
 #banner {
   background: #9c9;
@@ -153,5 +154,9 @@
 
 
 
+/* Styles for Add to Cart Button */
 
+#store .entry form, #store .entry form div {
+  display: inline;
+}
 
