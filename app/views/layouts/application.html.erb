@@ -3,14 +3,16 @@
   <head>
     <title>Praggrog Books Online Store</title>
     <%= csrf_meta_tags %>
-    <%= stylesheet_link_tag    'scaffold' %>
-    <%= stylesheet_link_tag    'depot', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <!-- <%= stylesheet_link_tag    'scaffold' %> -->
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body id="store">
+  <body class='<%= controller.controller_name %>'>
+  <!-- <body id="store"> -->
   	<div id="banner">
-  		<%= image_tag("logo.png") %>
+  		<%= image_tag 'logo.png', alt: 'The Pragmatic Bookshelf' %>
+		<!-- <span class="title"><%= @page_title %></span> -->
   		<%= @page_title || "Pragmatic Bookshelf" %>
   	</div>
   	<div id="columns">
