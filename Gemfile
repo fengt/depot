@@ -1,5 +1,5 @@
-source 'https://rubygems.org'
-# source 'https://ruby.taobao.org'
+# source 'https://rubygems.org'
+source 'https://ruby.taobao.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -31,7 +31,14 @@ gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
 
 # Use Capistrano for deployment
-gem 'rvm-capistrano', group: :development
+group :development do
+  gem 'capistrano', "~> 3.6"
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
+  # gem 'capistrano-rbenv'
+  # Add this if you're using rvm
+  gem 'capistrano-rvm'
+end
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
